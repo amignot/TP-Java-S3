@@ -9,9 +9,7 @@ public class TestThreadNotification {
 		ThreadNotifB impair = new ThreadNotifB(compteur, "impair");
 		
 		pair.start();
-		pair.join();
 		impair.start();
-		impair.join();
 
 	}
 

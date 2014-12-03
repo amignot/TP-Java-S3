@@ -11,13 +11,12 @@ public class ThreadNotifA extends Thread{
 	
 	@Override
 	public void run() {
-		while (true) {
-			synchronized(this){
+		while(this.compteur.getL() != 100) {
+			synchronized(this.compteur){
 				if(this.compteur.getL() % 2 == 0) {
 					System.out.println(Thread.currentThread().getName()+' '+this.compteur.getL());
 					this.compteur.next();
 				}
-				this.notifyAll();
 				}
 		}
 	}
