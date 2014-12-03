@@ -17,7 +17,7 @@ public class ThreadNotifA extends Thread{
 					System.out.println(Thread.currentThread().getName()+' '+this.compteur.getL());
 					this.compteur.next();
 				}
-				}
+			}
 		}
 	}
 
