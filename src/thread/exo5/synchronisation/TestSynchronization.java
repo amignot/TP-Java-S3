@@ -1,5 +1,6 @@
 package thread.exo5.synchronisation;
 
+
 public class TestSynchronization {
 	
 	private static class ConcurrentThread extends Thread {
