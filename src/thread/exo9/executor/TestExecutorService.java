@@ -13,36 +13,36 @@ public class TestExecutorService {
 		
 		runnables.add(new Task());
 		runnables.add(new Task());
-		/* Lorsqu'on a 2 t‰ches pour un pool de 2 threads,
-		 * ils travaillent en parallle et affichent
-		 * la mme heure.*/
-		//On ajoute un troisime runnable
+		/* Lorsqu'on a 2 tâches pour un pool de 2 threads,
+		 * ils travaillent en parallèle et affichent
+		 * la même heure.*/
+		//On ajoute un troisième runnable
 		runnables.add(new Task());
-		/* Lorsqu'on a 3 t‰ches pour un pool de 2 threads, 
-		 * on a d'abord les 2 threads qui travaillent en parallle
-		 * et affichent la mme heure 10 fois.
-		 * Une fois ce traitement effectu, l'un des thread traite
-		 * la troisime t‰che et affiche 10 fois l'heure.*/
+		/* Lorsqu'on a 3 tâches pour un pool de 2 threads, 
+		 * on a d'abord les 2 threads qui travaillent en parallèle
+		 * et affichent la même heure 10 fois.
+		 * Une fois ce traitement effectué, l'un des thread traite
+		 * la troisième tâche et affiche 10 fois l'heure.*/
 
-		// On cre un pool de 2 threads
+		// On crée un pool de 2 threads
 		ExecutorService execute = Executors.newFixedThreadPool(2);
 		
 		executeRunnables(execute, runnables);
 	}
 	
 	public static void executeRunnables(final ExecutorService service, List<Runnable> runnables){
-        //On excute chaque "t‰che" de la liste "runnables"
+        //On exécute chaque "tâche" de la liste "runnables"
 		for(Runnable r : runnables){
 
 			service.execute(r);
 		}
-		/* Pour interrompre l'excution des threads,
-		 * on utilise la mthode shutdown() propose
+		/* Pour interrompre l'exécution des threads,
+		 * on utilise la méthode shutdown() proposée
 		 * par ExecutorService*/
 		service.shutdown();
 	}
 	
-	/* L'interface runnable est limite car
-	 * la mthode run() ne peut rien retourner et
+	/* L'interface runnable est limitée car
+	 * la méthode run() ne peut rien retourner et
 	 * elle ne permet pas de lancer d'exception.*/
 }

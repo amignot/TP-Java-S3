@@ -10,13 +10,13 @@ public class TestCallableExecutor {
 	public static void main(String[] args) {
 		
 		
-		//On crŽe un pool de thread pour exŽcuter notre t‰che
+		//On crée un pool de thread pour exécuter notre tâche
 		ExecutorService execute = Executors.newSingleThreadExecutor();
-		//On exŽcute notre t‰che gr‰ce ˆ la mŽthode submit() d'ExecutorService
-		//Cette mŽthode renvoie un objet de type Future
+		//On exécute notre tâche grâce à la méthode submit() d'ExecutorService
+		//Cette méthode renvoie un objet de type Future
 		Future<Integer> resultat = execute.submit( new CallableTask());
 		
-		//On a donc rŽcupŽrŽ notre rŽsultat dans la variable resultat
+		//On a donc récupéré notre résultat dans la variable resultat
 		try {
 			System.out.println("RŽsultat de la t‰che callable : " + resultat.get());
 		} catch(InterruptedException | ExecutionException e) {

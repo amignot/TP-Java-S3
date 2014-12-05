@@ -18,3 +18,11 @@ public class TestArret {
 	}
 
 }
+
+/*
+ * Il faut synchoniser les méthodes setStopped et isStopped car dans le cas contraire, 
+ * la valeur du booleen stopped restera inchangée lors de l'éxecution du thread.
+ * 
+ * Si les points s'affichent toutes les 10 000ms alors, il n'y aura qu'1 ou 0 point d'affichés.
+ */
+ 

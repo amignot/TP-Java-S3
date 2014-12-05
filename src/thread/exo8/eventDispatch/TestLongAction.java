@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 
 public class TestLongAction extends JFrame {
 
@@ -21,14 +20,8 @@ public class TestLongAction extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/*LongAction action = new LongAction();*/
-				/* new Thread(action).start();*/ 
-				Thread t = new Thread() {
-		            public void run() {
-		              new LongAction().run(); 
-		            }
-		          };
-		          t.start();
+				LongAction action = new LongAction();
+				new Thread(action).start();
 			}
 		});
 
@@ -46,3 +39,19 @@ public class TestLongAction extends JFrame {
 	} 
 
 }
+
+/*
+ * Lorsque la fenêtre est retaillée, elle ne s'adapte pas au changement de taille.
+ * 
+ * Pour y remédier on peut changer le contenu de actionPerformed et mettre : (pour lancer dans un thread 
+ * l'affichage de la fenêtre et dans l'autre l'exécution de LongAction)
+ * 
+ * Thread t = new Thread() {
+		            public void run() {
+		              new LongAction().run(); 
+		            }
+		          };
+		          t.start();
+ *
+ * ou on peut utiliser la méthode invokeLater();
+ */
