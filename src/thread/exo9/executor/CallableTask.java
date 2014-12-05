@@ -24,8 +24,8 @@ public class CallableTask implements Callable<Integer> {
 		return cpt;
 	}
 	/*
-	 * On rcupre le rsultat de cette mthode
-	 * gr‰ce ˆ la mthode get() de l'interface Future
+	 * On récupère le résultat de cette méthode
+	 * grâce à la méthode get() de l'interface Future
 	 * voir classe TestCallableExecutor
 	 */
 

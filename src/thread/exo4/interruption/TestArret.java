@@ -17,3 +17,7 @@ public class TestArret {
 	}
 
 }
+
+/*
+ * Si les points s'affichent toutes les 10 000ms alors, il n'y aura qu'1 ou 0 point d'affichés. 
+ */

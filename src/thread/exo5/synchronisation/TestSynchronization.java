@@ -11,6 +11,7 @@ public class TestSynchronization {
 			this.setName(name);
 		}
 		
+		@SuppressWarnings("unused")
 		public Compteur getCompteur() {
 			return this.compteur;
 		}
@@ -45,6 +46,13 @@ public class TestSynchronization {
 		
 		System.out.println(compteur.getL());
 	}
-	
-
 }
+
+/*
+ * Si les threads ne sont pas joints ils vont accéder au compteur de manière aléatoire,
+ * et n'auront donc pas tous la "bonne" valeur du compteur.
+ * 
+ * Ce programme n'est pas thread-safe car la valeur du compteur n'est pas synchronisée.
+ * 
+ * Pour le corrigé, il faut synchroniser les méthodes getL() et next().
+ */
