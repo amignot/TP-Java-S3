@@ -6,12 +6,16 @@ import pattern.exo3.composite.Repertoire;
 
 public class HierarchiqueVisiteur implements Visiteur{
 
+	private int compteur;
+	
 	public HierarchiqueVisiteur() {
+		this.compteur = 0;
 	}
 	
 	@Override
 	public void visit(Fichier fic) {
-		System.out.println(fic.getNom());	
+		System.out.println(fic.getNom());
+		this.afterVisit(fic);
 	}
 
 	@Override
@@ -21,12 +25,16 @@ public class HierarchiqueVisiteur implements Visiteur{
 
 	@Override
 	public void beforeVisit(ComposantSysteme compo) {
-		// TODO Auto-generated method stub	
+		for(int i = 0; i < this.compteur; i++){
+			System.out.print("\t");
+		}
+		System.out.print("\\-----");
+		this.compteur ++;
 	}
 
 	@Override
 	public void afterVisit(ComposantSysteme compo) {
-		// TODO Auto-generated method stub
+		this.compteur --;
 	}
 
 }

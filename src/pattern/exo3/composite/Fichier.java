@@ -1,5 +1,7 @@
 package pattern.exo3.composite;
 
+import pattern.exo3.visiteur.Visiteur;
+
 public class Fichier extends ComposantSysteme {
 	
 	private String nom;
@@ -23,5 +25,10 @@ public class Fichier extends ComposantSysteme {
 	@Override
 	public String toString() {
 		return this.nom+"\t"+this.taille;
+	}
+	
+	@Override 
+	public void acceptVisiteur(Visiteur visiteur){
+		visiteur.visit(this);
 	}
 }

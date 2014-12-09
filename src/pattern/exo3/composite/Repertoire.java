@@ -3,6 +3,8 @@ package pattern.exo3.composite;
 import java.util.ArrayList;
 import java.util.List;
 
+import pattern.exo3.visiteur.Visiteur;
+
 public class Repertoire extends ComposantSysteme {
 	
 	private String nom;
@@ -54,6 +56,16 @@ public class Repertoire extends ComposantSysteme {
 	
 	@Override
 	public String toString() {
-		return "Répertoire[nom="+this.getNom()+", liste des composants système="+this.composants+"]";
+		return "R≈Ωpertoire[nom="+this.getNom()+", liste des composants systÔøΩme="+this.composants+"]";
+	}
+	
+	@Override 
+	public void acceptVisiteur(Visiteur visiteur){
+		visiteur.visit(this);
+		for(ComposantSysteme compo:this.composants) {
+			visiteur.beforeVisit(compo);
+			compo.acceptVisiteur(visiteur);
+		}
+		visiteur.afterVisit(this);
 	}
 }

@@ -1,9 +1,12 @@
 package pattern.exo3.composite;
 
+import pattern.exo3.visiteur.HierarchiqueVisiteur;
+
 public class TestComposite {
 
 	public static void main(String[] args) {
 		
+		HierarchiqueVisiteur visiteur = new HierarchiqueVisiteur();
 		Repertoire rep1 = new Repertoire("C:");
 		Repertoire rep2 = new Repertoire("Windows");
 		Repertoire rep3 = new Repertoire("System32");
@@ -22,6 +25,7 @@ public class TestComposite {
 		rep1.addComposantSysteme(rep4);
 		
 		System.out.println(rep1);
+		rep1.acceptVisiteur(visiteur);
 	}
 
 }
