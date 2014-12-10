@@ -1,40 +1,41 @@
 package pattern.exo3.visiteur;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import pattern.exo3.composite.ComposantSysteme;
 import pattern.exo3.composite.Fichier;
 import pattern.exo3.composite.Repertoire;
 
-public class HierarchiqueVisiteur implements Visiteur{
+public class FichierVisiteur implements Visiteur{
 
-	private int compteur;
+	private List<String> list;
 	
-	public HierarchiqueVisiteur() {
-		this.compteur = 0;
+	public FichierVisiteur(){
+		this.list = new ArrayList<String>();
 	}
 	
 	@Override
 	public void visit(Fichier fic) {
-		System.out.println(fic.getNom()+"\t \t"+fic.getTaille());
-		this.afterVisit(fic);
+		this.list.add(fic.getNom());		
 	}
 
 	@Override
 	public void visit(Repertoire rep) {
-		System.out.println(rep.getNom());	
+		
 	}
 
 	@Override
 	public void beforeVisit(ComposantSysteme compo) {
-		for(int i = 0; i < this.compteur; i++){
-			System.out.print("\t");
-		}
-		System.out.print("\\-----");
-		this.compteur ++;
+		
 	}
 
 	@Override
 	public void afterVisit(ComposantSysteme compo) {
-		this.compteur --;
+
 	}
 
+	public List<String> getListFichier(){
+		return this.list;
+	}
 }

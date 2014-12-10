@@ -4,7 +4,7 @@ public class Meteo implements Observateur {
 
 	@Override
 	public void modifierDonnees(Donnee d) {
-		System.out.println(d);
+		System.out.println(d+"\n");
 	}
 	
 }

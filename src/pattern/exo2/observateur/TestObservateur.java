@@ -9,6 +9,7 @@ public class TestObservateur {
 		final Capteur capt = new Capteur();
 		capt.ajouterObservateur(new Meteo());
 		capt.ajouterObservateur(new Grapheur());
+		capt.ajouterObservateur(new Statistique());
 		
 		final ExecutorService executeur = Executors.newSingleThreadExecutor();
 		

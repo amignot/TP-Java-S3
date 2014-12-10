@@ -1,5 +1,7 @@
 package pattern.exo3.composite;
 
+import pattern.exo3.visiteur.FichierVisiteur;
+import pattern.exo3.visiteur.GlobalNameVisiteur;
 import pattern.exo3.visiteur.HierarchiqueVisiteur;
 
 public class TestComposite {
@@ -7,6 +9,8 @@ public class TestComposite {
 	public static void main(String[] args) {
 		
 		HierarchiqueVisiteur visiteur = new HierarchiqueVisiteur();
+		GlobalNameVisiteur visiteur2 = new GlobalNameVisiteur();
+		FichierVisiteur visiteur3 = new FichierVisiteur();
 		Repertoire rep1 = new Repertoire("C:");
 		Repertoire rep2 = new Repertoire("Windows");
 		Repertoire rep3 = new Repertoire("System32");
@@ -25,7 +29,12 @@ public class TestComposite {
 		rep1.addComposantSysteme(rep4);
 		
 		System.out.println(rep1);
+		System.out.println("\n HierarchiqueVisiteur : \n");
 		rep1.acceptVisiteur(visiteur);
+		System.out.println("\n GlobalNameVisiteur : \n");
+		rep1.acceptVisiteur(visiteur2);
+		rep1.acceptVisiteur(visiteur3);
+		System.out.println("\n Liste des fichiers : "+visiteur3.getListFichier());
 	}
 
 }

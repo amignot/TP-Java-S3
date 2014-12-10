@@ -56,7 +56,7 @@ public class Repertoire extends ComposantSysteme {
 	
 	@Override
 	public String toString() {
-		return "RŽpertoire[nom="+this.getNom()+", liste des composants syst�me="+this.composants+"]";
+		return "Répertoire[nom= "+this.getNom()+", liste des composants système= "+this.composants+"]";
 	}
 	
 	@Override 
