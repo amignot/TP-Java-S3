@@ -1,6 +1,6 @@
 package pattern.exo3.visiteur;
 /**
- * Classe FichierVisiteur qui permet de créer un Visiteur qui permet de récupérer les fichiers dans l'arborescence
+ * Classe FichierVisiteur qui permet de crÃ©er un Visiteur qui permet de rÃ©cupÃ©rer les fichiers dans l'arborescence
  * @see pattern.exo3.visiteur.Visiteur
  * @author Adeline Mignot - Camille Blaser
  * @version 1.0
@@ -18,15 +18,15 @@ public class FichierVisiteur implements Visiteur{
 	private List<String> list;
 	
 	/**
-	 * Constructeur de la classe qui permet de créer une liste où sera stocké le nom des fichiers
+	 * Constructeur de la classe qui permet de crÃ©er une liste oÃ¹ sera stockÃ© le nom des fichiers
 	 */
 	public FichierVisiteur(){
 		this.list = new ArrayList<String>();
 	}
 	
 	/**
-	 * Cette méthode permet de visiter un fichier passé en paramétre
-	 * @param fic : c'est le fichier à visiter
+	 * Cette mÃ©thode permet de visiter un fichier passÃ© en paramÃ¨tre
+	 * @param fic : c'est le fichier Ã  visiter
 	 */
 	@Override
 	public void visit(Fichier fic) {
@@ -34,8 +34,8 @@ public class FichierVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet de visiter un répertoire passé en paramètre
-	 * @param rep : c'est le répertoire à visiter
+	 * Cette mÃ©thode permet de visiter un rÃ©pertoire passÃ© en paramÃ¨tre
+	 * @param rep : c'est le rÃ©pertoire Ã  visiter
 	 */
 	@Override
 	public void visit(Repertoire rep) {
@@ -43,8 +43,8 @@ public class FichierVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet de déffinir ce que l'on fait avant la visite
-	 * @param compo : c'est le ComposantSysteme qui va être visité
+	 * Cette mÃ©thode permet de dÃ©finir ce que l'on fait avant la visite
+	 * @param compo : c'est le ComposantSysteme qui va Ãªtre visitÃ©
 	 */
 	@Override
 	public void beforeVisit(ComposantSysteme compo) {
@@ -52,8 +52,8 @@ public class FichierVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet de déffinir ce que l'on fait après la visite
-	 * @param compo : c'est le ComposantSysteme qui a été visité
+	 * Cette mÃ©thode permet de dÃ©finir ce que l'on fait aprÃ¨s la visite
+	 * @param compo : c'est le ComposantSysteme qui a Ã©tÃ© visitÃ©
 	 */
 	@Override
 	public void afterVisit(ComposantSysteme compo) {
@@ -61,7 +61,7 @@ public class FichierVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet de récupérer la liste des fichiers de l'arborescence
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer la liste des fichiers de l'arborescence
 	 * @return List<String> : c'est la liste des fichiers de l'arborescence
 	 */
 	public List<String> getListFichier(){

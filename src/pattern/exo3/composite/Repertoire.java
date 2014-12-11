@@ -80,9 +80,9 @@ public class Repertoire extends ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet de récupérer le ComposantSystéme à une place donnée
-	 * @param index : c'est l'index du ComposantSystéme que l'on veut récupérer
-	 * @return ComposantSysteme : le ComposantSystéme d'index index
+	 * Cette méthode permet de récupérer le ComposantSysteme à une place donnée
+	 * @param index : c'est l'index du ComposantSysteme que l'on veut récupérer
+	 * @return ComposantSysteme : le ComposantSysteme d'index index
 	 * @see pattern.exo3.composite.ComposantSysteme
 	 */
 	@Override

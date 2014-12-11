@@ -1,6 +1,7 @@
 package pattern.exo3.visiteur;
 /**
- * Classe HierarchiqueVisiteur qui permet de créer un Visiteur qui affiche l'arborescence d'un ComposantSysteme
+ * Classe HierarchiqueVisiteur qui permet de crÃ©er un Visiteur qui affiche 
+ * l'arborescence d'un ComposantSysteme
  * @author Adeline Mignot - Camille Blaser
  * @version 1.0
  * @since 05.12.2014
@@ -16,15 +17,15 @@ public class HierarchiqueVisiteur implements Visiteur{
 	private int compteur;
 	
 	/**
-	 * Constructeur de classe qui permet d'initaliser un compteur, qui va compter l'indentation à faire
+	 * Constructeur de classe qui permet d'initaliser un compteur
 	 */
 	public HierarchiqueVisiteur() {
 		this.compteur = 0;
 	}
 	
 	/**
-	 * Cette méthode permet d'afficher le nom d'un fichier (passé en paramètre) et sa taille 
-	 * @param fic : c'est le fichier à visiter
+	 * Cette mÃ©thode permet d'afficher le nom d'un fichier visitÃ© et sa taille 
+	 * @param fic : c'est le fichier Ã  visiter
 	 */
 	@Override
 	public void visit(Fichier fic) {
@@ -33,8 +34,8 @@ public class HierarchiqueVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet d'afficher le nom d'un répertoire passé en paramètre
-	 * @param rep : c'est le répertoire à visiter
+	 * Cette mÃ©thode permet d'afficher le nom d'un rÃ©pertoire visitÃ©
+	 * @param rep : c'est le rÃ©pertoire Ã  visiter
 	 */
 	@Override
 	public void visit(Repertoire rep) {
@@ -42,8 +43,8 @@ public class HierarchiqueVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet d'effectuer l'indentation avant l'affichage
-	 * @param compo : c'est le ComposantSysteme qui va être visité
+	 * Cette mÃ©thode permet d'effectuer l'indentation avant l'affichage
+	 * @param compo : c'est le ComposantSysteme qui va Ãªtre visitÃ©
 	 */
 	@Override
 	public void beforeVisit(ComposantSysteme compo) {
@@ -55,8 +56,8 @@ public class HierarchiqueVisiteur implements Visiteur{
 	}
 
 	/**
-	 * Cette méthode permet de décrémenter le compteur d'indentation
-	 * @param compo : c'est le ComposantSysteme qui a été visité
+	 * Cette mÃ©thode permet de dÃ©crÃ©menter le compteur d'indentation
+	 * @param compo : c'est le ComposantSysteme qui a Ã©tÃ© visitÃ©
 	 */
 	@Override
 	public void afterVisit(ComposantSysteme compo) {

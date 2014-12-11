@@ -1,6 +1,7 @@
 package pattern.exo3.visiteur;
 /**
- * Classe GlobalNameVisiteur qui permet de créer un Visiteur qui affiche le chemin complet des fichiers/répertoires d'un répertoire
+ * Classe GlobalNameVisiteur qui permet de créer un Visiteur 
+ * qui affiche le chemin complet des fichiers/répertoires d'un répertoire
  * @see pattern.exo3.visiteur.Visiteur
  * @author Adeline Mignot - Camille Blaser
  * @version 1.0
@@ -17,7 +18,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	private int compteur;
 	
 	/**
-	 * Constructeur de la classe qui permet de créer une liste où sera stocké des noms de répertoires 
+	 * Constructeur de la classe qui permet de créer une liste où seront stockés des noms de répertoires 
 	 */
 	public GlobalNameVisiteur(){
 		this.list = new ArrayList<String>();
@@ -25,7 +26,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	}
 	
 	/**
-	 * Cette méthode permet de visiter un fichier passé en paramétre
+	 * Cette méthode permet de visiter le fichier passé en paramètre
 	 * @param fic : c'est le fichier à visiter
 	 */
 	@Override
@@ -34,7 +35,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	}
 	
 	/**
-	 * Cette méthode permet de visiter un répertoire passé en paramètre
+	 * Cette méthode permet de visiter le répertoire passé en paramètre
 	 * @param rep : c'est le répertoire à visiter
 	 */
 	@Override
@@ -46,7 +47,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	}
 
 	/**
-	 * Cette méthode permet de déffinir ce que l'on fait avant la visite
+	 * Cette méthode permet de définir ce que l'on fait avant la visite
 	 * @param compo : c'est le ComposantSysteme qui va être visité
 	 */
 	@Override
@@ -55,7 +56,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	}
 
 	/**
-	 * Cette méthode permet de déffinir ce que l'on fait après la visite
+	 * Cette méthode permet de définir ce que l'on fait après la visite
 	 * @param compo : c'est le ComposantSysteme qui a été visité
 	 */
 	@Override
@@ -65,7 +66,7 @@ public class GlobalNameVisiteur implements Visiteur {
 	}
 	
 	/**
-	 * Cette méthode permet d'afficher le chemin des chaque fichier/répertoire
+	 * Cette méthode permet d'afficher le chemin de chaque fichier/répertoire
 	 * @param list : liste de fichiers à afficher
 	 * @return String : une chaine de caractère contenant le nom des fichiers 
 	 */

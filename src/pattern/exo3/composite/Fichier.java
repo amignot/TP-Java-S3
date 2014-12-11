@@ -1,7 +1,7 @@
 package pattern.exo3.composite;
 /**
- * Classe Fichier qui étand la classe ComposantSysteme
- * Cette classe permet de créer et gérer un fichier
+ * Classe Fichier qui Ã©tend la classe ComposantSysteme
+ * Cette classe permet de crÃ©er et gÃ©rer un fichier
  * 
  * @see pattern.exo3.composite.ComposantSystem
  * @author Adeline Mignot - Camille Blaser
@@ -16,10 +16,10 @@ public class Fichier extends ComposantSysteme {
 	private int taille;
 	
 	/**
-	 * C'est le constructeur de la classe, il permet de créer un fichier avec un nom 
+	 * C'est le constructeur de la classe, il permet de crÃ©er un fichier avec un nom 
 	 * et une taille
-	 * @param nom : c'est le nom du fichier à créer
-	 * @param taille : c'est la taille du fichier à créer
+	 * @param nom : c'est le nom du fichier Ã  crÃ©er
+	 * @param taille : c'est la taille du fichier Ã  crÃ©er
 	 */
 	public Fichier(String nom, int taille) {
 		this.nom = nom;
@@ -27,7 +27,7 @@ public class Fichier extends ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet de récupérer le nom du fichier
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer le nom du fichier
 	 * @return String : le nom du fichier
 	 * @see pattern.exo3.composite.ComposantSysteme
 	 */
@@ -37,7 +37,7 @@ public class Fichier extends ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet de récupérer la taille du fichier
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer la taille du fichier
 	 * @return int : la taille du fichier
 	 * @see pattern.exo3.composite.ComposantSysteme
 	 */
@@ -47,8 +47,8 @@ public class Fichier extends ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet de définir l'affichage console d'un fichier
-	 * @return String : la chaine de caractères correspondant à un fichier
+	 * Cette mÃ©thode permet de dÃ©finir l'affichage en console d'un fichier
+	 * @return String : la chaine de caractÃ¨res correspondant Ã  un fichier
 	 */
 	@Override
 	public String toString() {
@@ -56,8 +56,8 @@ public class Fichier extends ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet d'accepter un visiteur 
-	 * @param visiteur : le visiteur utilisé
+	 * Cette mÃ©thode permet d'accepter un visiteur 
+	 * @param visiteur : le visiteur utilisÃ©
 	 * @see pattern.exo3.composite.ComposantSysteme
 	 */
 	@Override 

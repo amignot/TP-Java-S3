@@ -1,6 +1,6 @@
 package pattern.exo3.composite;
 /**
- * Interface ComposantSysteme qui permet de déffinir les méthodes à implémenter pour un composantSysteme
+ * Interface ComposantSysteme qui permet de dÃ©finir les mÃ©thodes Ã  implÃ©menter pour un composantSysteme
  * @author Adeline Mignot - Camille Blaser
  * @version 1.0
  * @since 05.12.2014
@@ -10,7 +10,7 @@ import pattern.exo3.visiteur.*;
 public abstract class ComposantSysteme {
 	
 	/**
-	 * Cette méthode permet de récupérer le nom d'un ComposantSysteme
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer le nom d'un ComposantSysteme
 	 * @return String : le nom du ComposantSysteme
 	 */
 	public String getNom() {
@@ -18,7 +18,7 @@ public abstract class ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet de récupérer la taille d'un ComposantSysteme
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer la taille d'un ComposantSysteme
 	 * @return int : c'est la taille du ComposantSysteme
 	 */
 	public int getTaille() {
@@ -26,7 +26,7 @@ public abstract class ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet d'ajouter un ComposantSysteme
+	 * Cette mÃ©thode permet d'ajouter un ComposantSysteme
 	 * @param composant : c'est le composant que l'on souhaite ajouter 
 	 */
 	public void addComposantSysteme(ComposantSysteme composant) {
@@ -34,25 +34,25 @@ public abstract class ComposantSysteme {
 	}
 	
 	/**
-	 * Cette méthode permet d'enlever un ComposantSysteme
-	 * @param composant : c'est le ComposantSysteme à enlever
+	 * Cette mÃ©thode permet d'enlever un ComposantSysteme
+	 * @param composant : c'est le ComposantSysteme Ã  enlever
 	 */
 	public void removeComposantSysteme(ComposantSysteme composant) {
 		throw new UnsupportedOperationException();
 	}
 	
 	/**
-	 * Cette méthode permet de récupérer le ComposantSystéme à une place donnée
-	 * @param index : c'est l'index du ComposantSystéme que l'on veut récupérer
-	 * @return ComposantSysteme : le ComposantSystéme d'index index
+	 * Cette mÃ©thode permet de rÃ©cupÃ©rer le ComposantSysteme Ã  une place donnÃ©e
+	 * @param index : c'est l'index du ComposantSysteme que l'on veut rÃ©cupÃ©rer
+	 * @return ComposantSysteme : le ComposantSysteme d'index index
 	 */
 	public ComposantSysteme getComposantSysteme(int index) {
 		throw new UnsupportedOperationException();
 	}
 	
 	/**
-	 * Cette méthode permet d'accepter un visiteur 
-	 * @param visiteur : le visiteur utilisé
+	 * Cette mÃ©thode permet d'accepter un visiteur 
+	 * @param visiteur : le visiteur utilisÃ©
 	 */
 	public void acceptVisiteur(Visiteur visiteur) {
 		throw new UnsupportedOperationException();
