@@ -24,3 +24,8 @@ public class TestFile {
 		System.out.println(file.tete());
 	}
 }
+
+/*
+ * C'est la classe File qui joue le rôle de la cible et de l'Adapté.
+ * C'est la classe FileImpl qui joue le rôle du client et de l'Adapteur.
+ */

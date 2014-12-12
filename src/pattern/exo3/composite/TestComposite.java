@@ -53,3 +53,16 @@ public class TestComposite {
 	}
 
 }
+
+/*
+ * Dans la méthode getTaille() de Répertoire, on crée un compteur qui va être incrémenté de la taille de chaque composantSysteme du répertoire.
+ * Cette méthode est récursive.
+ * 
+ * Lors du premier affichage on obtient une ligne avec tout les noms des composants et de leur contenu.
+ * 
+ * Pour propager l'observateur, il faut accepter la visite sur le répertoire à visiter à l'aid ede la méthode acceptVisiteur().
+ * 
+ * Les méthodes beforeVisit() et afterVisit() permettent d'indenter l'affichage.
+ * 
+ * (Veuillez nous excuser pour l'encodage nous avons des soucis avec le partage du fichier)
+ */
